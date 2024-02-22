@@ -2,7 +2,6 @@ package com.example.app1.kafka.config;
 
 import java.util.HashMap;
 import java.util.Map;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
@@ -17,7 +16,7 @@ import org.springframework.kafka.support.ProducerListener;
 import org.springframework.kafka.support.converter.StringJsonMessageConverter;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
-@Slf4j
+
 @Configuration
 public class KafkaConfig {
 
@@ -50,8 +49,6 @@ public class KafkaConfig {
             @Override
             public void onSuccess(ProducerRecord<String, String> producerRecord,
                                   RecordMetadata recordMetadata) {
-                log.info("ACK from ProducerListener message: {} offset:  {}",
-                    producerRecord.value(), recordMetadata.offset());
             }
         });
         return kafkaTemplate;

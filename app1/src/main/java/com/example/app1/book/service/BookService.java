@@ -1,29 +1,31 @@
 package com.example.app1.book.service;
 
-import com.example.app1.book.exception.BookNotFoundException;
-import com.example.app1.book.repository.BookRepository;
 import com.example.app1.book.document.BookDocument;
 import com.example.app1.book.dto.RentBookRequest;
+import com.example.app1.book.exception.BookNotFoundException;
 import com.example.app1.book.mapper.BookMapper;
 import com.example.app1.book.model.Book;
+import com.example.app1.book.repository.BookRepository;
 import com.example.app1.book.topic.producer.KafkaProducer;
-import lombok.RequiredArgsConstructor;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
-@RequiredArgsConstructor
 public class BookService {
 
     private final BookRepository bookRepository;
     private final KafkaProducer kafkaProducer;
 
+    public BookService(BookRepository bookRepository, KafkaProducer kafkaProducer) {
+        this.bookRepository = bookRepository;
+        this.kafkaProducer = kafkaProducer;
+    }
+
     public List<BookDocument> findAll() {
         return bookRepository.findAll();
     }
 
-    public Book addNewBook(Book book){
+    public Book addNewBook(Book book) {
         BookDocument toSave = BookMapper.MAPPER.mapToBookModel(book);
         return BookMapper.MAPPER.mapToBook(bookRepository.save(toSave));
     }

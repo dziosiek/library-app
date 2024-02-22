@@ -1,12 +1,5 @@
 package com.example.app1.book.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-
-@RequiredArgsConstructor
-@Getter
 public class AddNewBookRequest {
 
     private final String title;
@@ -14,4 +7,33 @@ public class AddNewBookRequest {
     private final String isbn;
     private final String category;
     private final String borrower;
+
+    public AddNewBookRequest(String title, String author, String isbn, String category,
+                             String borrower) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.category = category;
+        this.borrower = borrower;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public String getAuthor() {
+        return this.author;
+    }
+
+    public String getIsbn() {
+        return this.isbn;
+    }
+
+    public String getCategory() {
+        return this.category;
+    }
+
+    public String getBorrower() {
+        return this.borrower;
+    }
 }
