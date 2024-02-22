@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "3ae3e1c0-7c3f-44a0-ace1-3e5d6b32c566",
+		"name": "library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29429891"
+	},
+	"item": [
+		{
+			"name": "https://ab.us.edu.pl/emp?id=60893",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"ABCD\",\r\n  \"author\": \"John Lennon\",\r\n  \"isbn\": \"1234567891\",\r\n  \"category\": \"Fiction\",\r\n  \"borrower\": \"Alice Borrower\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://ab.us.edu.pl/emp?id=60893 Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"ABCD\",\r\n  \"author\": \"John Lennon\",\r\n  \"isbn\": \"1234567891\",\r\n  \"category\": \"Fiction\",\r\n  \"borrower\": \"Alice Borrower\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://ab.us.edu.pl/emp?id=60893 Copy 2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"ABCD\",\r\n  \"author\": \"John Lennon\",\r\n  \"isbn\": \"1234567891\",\r\n  \"category\": \"Fiction\",\r\n  \"borrower\": \"Alice Borrower\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://ab.us.edu.pl/emp?id=60893 Copy 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"ABCD\",\r\n  \"author\": \"John Lennon\",\r\n  \"isbn\": \"1234567891\",\r\n  \"category\": \"Fiction\",\r\n  \"borrower\": \"Alice Borrower\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
