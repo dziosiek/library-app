@@ -8,4 +8,4 @@ Also I placed a postman collections which contains request examples.
 
 Update: Lombok has been deleted from both app due mapstruct issues. 
 
-**Please run applications using delombok branch**
+**Please run applications using main branch**
